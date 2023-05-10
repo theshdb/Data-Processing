@@ -10,3 +10,5 @@ export interface DataFrameRow {
 export interface DataFrameIterator {
     [Symbol.iterator](): IterableIterator<DataFrameRow>;
 }
+
+

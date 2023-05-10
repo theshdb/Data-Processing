@@ -12,15 +12,10 @@ const df: DataFrame = new DataFrame({
 console.log(df.getColumnTypes());
 console.log(df.toString() + '\n\n\n');
 
-console.log(df.shape);
-
-// declare a const variable and log df column types
-const columnTypes = df.getColumnTypes();
-console.log(columnTypes);
+// console.log(df.shape);
 
 // const head = df.head(1);
 // console.log(head.toString());
-
 
 
 // const newDf: DataFrame = df.renameColumn('name', 'first_name');
@@ -33,4 +28,5 @@ console.log(columnTypes);
 // const columnNames = df.columns;
 // console.log(columnNames);
 
-
+// const selectedDf = df.select('name', 'age');
+// console.log(selectedDf.toString());

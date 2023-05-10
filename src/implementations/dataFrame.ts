@@ -1,5 +1,5 @@
-import { DataFrameOptions, DataFrameRow } from '../abstractions/data_frame';
-import { AbstractDataFrame } from '../abstractions/data_frame/AbstractDataFrame';
+import { DataFrameOptions, DataFrameRow } from '../abstractions';
+import { AbstractDataFrame } from '../abstractions/abstractDataFrame';
 
 export class DataFrame extends AbstractDataFrame {
 
