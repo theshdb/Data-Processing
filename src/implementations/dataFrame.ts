@@ -1,35 +1,22 @@
 import { DataFrameOptions, DataFrameRow } from '../abstractions/data_frame';
-import { DataFrame } from '../abstractions/data_frame/dataFrame';
-import { DataFrameOperations } from '../abstractions/data_frame/dataFrameOperations';
+import { AbstractDataFrame } from '../abstractions/data_frame/AbstractDataFrame';
 
-export class DataFrameClass extends DataFrameOperations {
+export class DataFrame extends AbstractDataFrame {
 
     constructor(options: DataFrameOptions) {
         super(options)
     }
 
-    // get columns(): string[] {
-    //     return super._columns;
-    // }
-
-    // get rows(): number {
-    //     return super._data.length;
-    // }
-
     [Symbol.iterator](): IterableIterator<DataFrameRow> {
         let index = 0;
-        let self = {
-            rows: super.rows,
-            data: super.rawData,
-            columns: super.columns,
-        }
+        const self = this;
 
         function* generator() {
             while (index < self.rows) {
                 const row: DataFrameRow = {};
 
-                self.columns.forEach((column, columnIndex) => {
-                    row[column] = self.data[index][columnIndex];
+                self._columns.forEach((column, columnIndex) => {
+                    row[column] = self._data[index][columnIndex];
                 });
 
                 index++;
@@ -41,17 +28,17 @@ export class DataFrameClass extends DataFrameOperations {
         return generator();
     }
 
-    head(n: number): DataFrame {
-        const slicedData = this._data.slice(0, n);
+    protected _head(n: number): DataFrame {
+        const slicedData = this._data.slice(0, n ?? 5);
         return new DataFrame({ columns: this._columns, data: slicedData });
     }
 
-    tail(n: number): DataFrame {
-        const slicedData = this._data.slice(-n);
+    protected _tail(n: number): DataFrame {
+        const slicedData = this._data.slice(-n ?? 5);
         return new DataFrame({ columns: this._columns, data: slicedData });
     }
 
-    getColumnTypes(): { [column: string]: string; } {
+    protected _getColumnTypes(): { [column: string]: string; } {
         const columnTypes: { [column: string]: string } = {};
         // Check type of each element in the first row of the data 
 
@@ -62,8 +49,7 @@ export class DataFrameClass extends DataFrameOperations {
         return columnTypes;
     }
 
-
-    renameColumn(oldColumnName: string, newColumnName: string): DataFrame {
+    protected _renameColumn(oldColumnName: string, newColumnName: string): DataFrame {
         const columnIdx = this._columns.indexOf(oldColumnName);
         if (columnIdx === -1) {
             throw new Error(`Column ${oldColumnName} not found.`);
@@ -78,7 +64,8 @@ export class DataFrameClass extends DataFrameOperations {
 
         return new DataFrame({ columns: newColumns, data: newData });
     }
-    dropColumn(columnName: string): DataFrame {
+
+    protected _dropColumn(columnName: string): DataFrame {
         const columnIdx = this._columns.indexOf(columnName);
         if (columnIdx === -1) {
             throw new Error(`Column ${columnName} not found.`);
@@ -92,10 +79,22 @@ export class DataFrameClass extends DataFrameOperations {
 
         return new DataFrame({ columns: newColumns, data: newData });
     }
-    select(...columns: string[]): DataFrame {
+
+    protected _select(...columns: string[]): DataFrame {
         const selectedColumns = this._columns.filter((col) => columns.includes(col));
         const selectedData = this._data.map((row) => row.filter((_, idx) =>
             columns.includes(this._columns[idx])));
         return new DataFrame({ columns: selectedColumns, data: selectedData });
+    }
+
+
+    protected _toString(): string {
+        const header = '\t' + this._columns.map(element => element.toString().padEnd(10, ' ')).join('\t\t');
+
+        const rows = this._data
+            .map(row => row.map(element => element.toString().padEnd(10, ' ')).join('\t\t'))
+            .map((str, index) => `${index + 1}\t${str}`)
+            .join('\n');
+        return `${header}\n\n${rows}`;
     }
 }
