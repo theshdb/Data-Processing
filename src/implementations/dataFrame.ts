@@ -38,7 +38,7 @@ export class DataFrame extends AbstractDataFrame {
         return new DataFrame({ columns: this._columns, data: slicedData });
     }
 
-    protected _getColumnTypes(): { [column: string]: string; } {
+    protected _getColumnTypes(): { [column: string]: string } {
         const columnTypes: { [column: string]: string } = {};
         // Check type of each element in the first row of the data 
 

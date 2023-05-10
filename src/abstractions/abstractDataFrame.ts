@@ -16,6 +16,10 @@ export abstract class AbstractDataFrame implements DataFrameIterator {
         return this._columns;
     }
 
+    get data(): any[][] {
+        return this._data;
+    }
+
     public dropColumn(columnName: string): DataFrame {
         return this._dropColumn(columnName);
     }
