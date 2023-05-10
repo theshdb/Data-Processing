@@ -17,10 +17,8 @@ export class GroupBy extends AbstractGroupBy {
                 if (!map.has(key)) {
                     map.set(key, []);
                 }
-
                 map.get(key)?.push(row);
             });
-
             return map;
         };
 
@@ -44,6 +42,27 @@ export class GroupBy extends AbstractGroupBy {
         return result;
     }
 
+
+    protected _max(columnName: string): { [key: string]: number } {
+        let result: { [key: string]: number } = {};
+        const keys = Object.keys(this.groupedData)
+
+        for (const key of keys) {
+            let max = Number.MIN_VALUE
+            const currentDataFrame = this.groupedData[key];
+            //loop through each row and sum the value of the column
+            for (const row of currentDataFrame.data) {
+                const currentValue = row[currentDataFrame.columns.indexOf(columnName)]
+                if (currentValue > max) {
+                    max = currentValue
+                }
+            }
+            result[key.toString()] = max
+        }
+        return result;
+    }
+
+
     protected _mean(column: string): { [key: string]: number; } {
         let result: { [key: string]: number; } = {};
         const keys = Object.keys(this.groupedData)
@@ -61,6 +80,24 @@ export class GroupBy extends AbstractGroupBy {
     }
 
 
+    protected _min(columnName: string): { [key: string]: number } {
+        let result: { [key: string]: number } = {};
+        const keys = Object.keys(this.groupedData)
+
+        for (const key of keys) {
+            let min = Number.MAX_VALUE
+            const currentDataFrame = this.groupedData[key];
+            //loop through each row and sum the value of the column
+            for (const row of currentDataFrame.data) {
+                const currentValue = row[currentDataFrame.columns.indexOf(columnName)]
+                if (currentValue < min) {
+                    min = currentValue
+                }
+            }
+            result[key.toString()] = min
+        }
+        return result;
+    }
 
 
     protected _sum(columnName: string): { [key: string]: number } {

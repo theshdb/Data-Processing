@@ -11,13 +11,6 @@ const df: DataFrame = new DataFrame({
     ],
 });
 
-// for (const row of df) {
-//     console.log(row.age);
-
-// }
-
-
-
 // console.log(df.getColumnTypes());
 // console.log(df.toString() + '\n\n\n');
 
@@ -33,21 +26,6 @@ const test = new DataManipulation({
 })
 
 const groupBy: GroupBy = test.groupBy(test, ...['gender']);
-// const keys: string[] = Object.keys(groupBy.groupedData);
-// for (const key of keys) {
-//     console.log(key);
-
-//     console.log(groupBy.groupedData[key.toString()], '--------');
-// }
-// console.log(groupBy.groupedData['female,25,10'], '--------');
-
-// const groupBySum = groupBy.sum('marks');
-// console.log(groupBySum);
-
-// const count = groupBy.count();
-// console.log(count);
-// console.log(groupBy.mean('marks'));
-
 
 
 
