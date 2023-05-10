@@ -1,30 +1,35 @@
-import { DataFrameIterator, DataFrameOptions, DataFrameRow } from '../abstractions/data_frame';
+import { DataFrameOptions, DataFrameRow } from '../abstractions/data_frame';
 import { DataFrame } from '../abstractions/data_frame/dataFrame';
+import { DataFrameOperations } from '../abstractions/data_frame/dataFrameOperations';
 
-export class DataFrameOperations extends DataFrame {
+export class DataFrameClass extends DataFrameOperations {
 
     constructor(options: DataFrameOptions) {
         super(options)
     }
 
-    get columns(): string[] {
-        return this._columns;
-    }
+    // get columns(): string[] {
+    //     return super._columns;
+    // }
 
-    get rows(): number {
-        return this._data.length;
-    }
+    // get rows(): number {
+    //     return super._data.length;
+    // }
 
     [Symbol.iterator](): IterableIterator<DataFrameRow> {
         let index = 0;
-        const self = this;
+        let self = {
+            rows: super.rows,
+            data: super.rawData,
+            columns: super.columns,
+        }
 
         function* generator() {
             while (index < self.rows) {
                 const row: DataFrameRow = {};
 
-                self._columns.forEach((column, columnIndex) => {
-                    row[column] = self._data[index][columnIndex];
+                self.columns.forEach((column, columnIndex) => {
+                    row[column] = self.data[index][columnIndex];
                 });
 
                 index++;
@@ -36,14 +41,14 @@ export class DataFrameOperations extends DataFrame {
         return generator();
     }
 
-    head(n: number): DataFrameOperations {
+    head(n: number): DataFrame {
         const slicedData = this._data.slice(0, n);
-        return new DataFrameOperations({ columns: this._columns, data: slicedData });
+        return new DataFrame({ columns: this._columns, data: slicedData });
     }
 
-    tail(n: number): DataFrameOperations {
+    tail(n: number): DataFrame {
         const slicedData = this._data.slice(-n);
-        return new DataFrameOperations({ columns: this._columns, data: slicedData });
+        return new DataFrame({ columns: this._columns, data: slicedData });
     }
 
     getColumnTypes(): { [column: string]: string; } {
@@ -58,7 +63,7 @@ export class DataFrameOperations extends DataFrame {
     }
 
 
-    renameColumn(oldColumnName: string, newColumnName: string): DataFrameOperations {
+    renameColumn(oldColumnName: string, newColumnName: string): DataFrame {
         const columnIdx = this._columns.indexOf(oldColumnName);
         if (columnIdx === -1) {
             throw new Error(`Column ${oldColumnName} not found.`);
@@ -71,9 +76,9 @@ export class DataFrameOperations extends DataFrame {
             return newRow;
         });
 
-        return new DataFrameOperations({ columns: newColumns, data: newData });
+        return new DataFrame({ columns: newColumns, data: newData });
     }
-    dropColumn(columnName: string): DataFrameOperations {
+    dropColumn(columnName: string): DataFrame {
         const columnIdx = this._columns.indexOf(columnName);
         if (columnIdx === -1) {
             throw new Error(`Column ${columnName} not found.`);
@@ -85,12 +90,12 @@ export class DataFrameOperations extends DataFrame {
             return newRow;
         });
 
-        return new DataFrameOperations({ columns: newColumns, data: newData });
+        return new DataFrame({ columns: newColumns, data: newData });
     }
-    select(...columns: string[]): DataFrameOperations {
+    select(...columns: string[]): DataFrame {
         const selectedColumns = this._columns.filter((col) => columns.includes(col));
         const selectedData = this._data.map((row) => row.filter((_, idx) =>
             columns.includes(this._columns[idx])));
-        return new DataFrameOperations({ columns: selectedColumns, data: selectedData });
+        return new DataFrame({ columns: selectedColumns, data: selectedData });
     }
 }
