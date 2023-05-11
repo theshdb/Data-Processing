@@ -1,4 +1,4 @@
-import { DataFrame } from "../implementations/dataFrame";
+import { DataFrameStructure } from "../implementations/dataFrameStructure";
 
 export interface DataFrameOptions {
     columns: string[];
@@ -21,5 +21,5 @@ export interface SortColumn {
 export type SortOrder = SortColumn[];
 
 export interface GroupedData {
-    [key: string]: DataFrame;
+    [key: string]: DataFrameStructure;
 }

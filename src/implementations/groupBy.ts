@@ -1,10 +1,10 @@
 import { GroupedData } from "../abstractions";
 import { AbstractGroupBy } from "../abstractions/abstractGroupBy";
-import { DataFrame } from "./dataFrame";
+import { DataFrameStructure } from "./dataFrameStructure";
 
 export class GroupBy extends AbstractGroupBy {
 
-    constructor(dataFrame: DataFrame, ...columns: string[]) {
+    constructor(dataFrame: DataFrameStructure, ...columns: string[]) {
 
         const groups: GroupedData = {};
 
@@ -25,7 +25,7 @@ export class GroupBy extends AbstractGroupBy {
         const groupedData = groupByColumns(dataFrame.data, columns);
 
         groupedData.forEach((groupData, key) => {
-            groups[key] = new DataFrame({ columns: dataFrame.columns, data: groupData });
+            groups[key] = new DataFrameStructure({ columns: dataFrame.columns, data: groupData });
         });
 
         super(groups)

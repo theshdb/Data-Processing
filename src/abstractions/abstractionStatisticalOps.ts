@@ -1,6 +1,6 @@
-import { DataFrame } from "../implementations/dataFrame";
+import { DataFrameStructure } from "../implementations/dataFrameStructure";
 
-export abstract class AbstractionStatisticalOps extends DataFrame {
+export abstract class AbstractionStatisticalOps extends DataFrameStructure {
 
     public mean(columns: string[]): { [key: string]: number } {
         return this._mean(columns);
