@@ -24,6 +24,6 @@ module.exports = {
     '.eslintrc.js'
   ],
   plugins: ['@typescript-eslint/eslint-plugin', 'import'],
-  extends: ['standard-with-typescript', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'eslint:recommended'],
+  extends: ['plugin:@typescript-eslint/recommended', 'eslint:recommended'],
   root: true
 }
