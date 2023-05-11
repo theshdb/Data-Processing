@@ -1,9 +1,5 @@
-import { Mixin } from "ts-mixer";
-import { DataFrameOptions } from "./abstractions";
-import { DataFrameStructure } from "./implementations/dataFrameStructure";
-import { DataManipulation } from "./implementations/dataManipulation";
-import { StatisticalOps } from "./implementations/statisticalOps";
-import { FileIO } from "./implementations/fileIO";
+import { DataFrameOptions } from "../abstractions";
+import { StatisticalOps } from "./statisticalOps";
 import fs from "fs";
 
 export default class DataFrame extends StatisticalOps {
@@ -13,7 +9,8 @@ export default class DataFrame extends StatisticalOps {
     }
 
     static fromJSON(path: string): DataFrame {
-        const data: string = fs.readFileSync(path, { encoding: "utf-8" });
+        let data: string = fs.readFileSync(path, { encoding: "utf-8" });
+        data = data.replace(/\r/g, '')
         const json = JSON.parse(data);
         let rows: any[][] = [];
         const columns = Object.keys(json[0]);
@@ -27,7 +24,8 @@ export default class DataFrame extends StatisticalOps {
     }
 
     static fromCSV(path: string): DataFrame {
-        const data: string = fs.readFileSync(path, { encoding: "utf-8" });
+        let data: string = fs.readFileSync(path, { encoding: "utf-8" });
+        data = data.replace(/\r/g, '')
         const lines: string[] = data.trim().split("\n");
         const columns = lines.shift()?.split(",");
         if (!columns) {

@@ -1,5 +1,5 @@
 import { AbstractFileIO } from '../abstractions/abstractFileIO';
-import DataFrame from '../combine';
+import DataFrame from './dataFrame';
 import { DataFrameStructure } from './dataFrameStructure';
 import fs from "fs";
 

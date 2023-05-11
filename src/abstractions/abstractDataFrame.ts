@@ -1,5 +1,5 @@
 import { DataFrameIterator, DataFrameOptions, DataFrameRow } from ".";
-import { DataFrameStructure } from "../implementations/dataFrameStructure";
+import DataFrame from '../implementations/dataFrame'
 
 
 export abstract class AbstractDataFrameStructure implements DataFrameIterator {
@@ -15,7 +15,7 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
         return this._data;
     }
 
-    public dropColumn(columnName: string): DataFrameStructure {
+    public dropColumn(columnName: string): DataFrame {
         return this._dropColumn(columnName);
     }
 
@@ -23,11 +23,11 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
         return this._getColumnTypes();
     }
 
-    public head(n?: number): DataFrameStructure {
+    public head(n?: number): DataFrame {
         return this._head(n);
     }
 
-    public renameColumn(oldColumnName: string, newColumnName: string): DataFrameStructure {
+    public renameColumn(oldColumnName: string, newColumnName: string): DataFrame {
         return this._renameColumn(oldColumnName, newColumnName);
     }
 
@@ -35,7 +35,7 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
         return this._data.length;
     }
 
-    public select(...columns: string[]): DataFrameStructure {
+    public select(...columns: string[]): DataFrame {
         return this._select(...columns);
     }
 
@@ -43,7 +43,7 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
         return [this.rows, this.columns.length];
     }
 
-    public tail(n?: number): DataFrameStructure {
+    public tail(n?: number): DataFrame {
         return this._tail(n);
     }
 
@@ -66,17 +66,17 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
 
     abstract [Symbol.iterator](): IterableIterator<DataFrameRow>
 
-    protected abstract _head(n?: number): DataFrameStructure
+    protected abstract _head(n?: number): DataFrame
 
-    protected abstract _tail(n?: number): DataFrameStructure
+    protected abstract _tail(n?: number): DataFrame
 
     protected abstract _getColumnTypes(): { [column: string]: string }
 
-    protected abstract _renameColumn(oldColumnName: string, newColumnName: string): DataFrameStructure
+    protected abstract _renameColumn(oldColumnName: string, newColumnName: string): DataFrame
 
-    protected abstract _dropColumn(columnName: string): DataFrameStructure
+    protected abstract _dropColumn(columnName: string): DataFrame
 
-    protected abstract _select(...columns: string[]): DataFrameStructure
+    protected abstract _select(...columns: string[]): DataFrame
 
     protected abstract _details(): string;
 

@@ -1,6 +1,7 @@
 import { DataFrameOptions, DataFrameRow } from '../abstractions';
 import { AbstractDataFrameStructure } from '../abstractions/abstractDataFrame';
 import fs from 'fs';
+import DataFrame from './dataFrame';
 
 export class DataFrameStructure extends AbstractDataFrameStructure {
 
@@ -34,14 +35,14 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
         return generator();
     }
 
-    protected _head(n: number): DataFrameStructure {
+    protected _head(n: number): DataFrame {
         const slicedData = this.data.slice(0, n ?? 5);
-        return new DataFrameStructure({ columns: this.columns, data: slicedData });
+        return new DataFrame({ columns: this.columns, data: slicedData });
     }
 
-    protected _tail(n: number): DataFrameStructure {
+    protected _tail(n: number): DataFrame {
         const slicedData = this.data.slice(-n ?? 5);
-        return new DataFrameStructure({ columns: this.columns, data: slicedData });
+        return new DataFrame({ columns: this.columns, data: slicedData });
     }
 
     protected _getColumnTypes(): { [column: string]: string } {
@@ -55,7 +56,7 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
         return columnTypes;
     }
 
-    protected _renameColumn(oldColumnName: string, newColumnName: string): DataFrameStructure {
+    protected _renameColumn(oldColumnName: string, newColumnName: string): DataFrame {
         const columnIdx = this.columns.indexOf(oldColumnName);
         if (columnIdx === -1) {
             throw new Error(`Column ${oldColumnName} not found.`);
@@ -68,10 +69,10 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
             return newRow;
         });
 
-        return new DataFrameStructure({ columns: newColumns, data: newData });
+        return new DataFrame({ columns: newColumns, data: newData });
     }
 
-    protected _dropColumn(columnName: string): DataFrameStructure {
+    protected _dropColumn(columnName: string): DataFrame {
         const columnIdx = this.columns.indexOf(columnName);
         if (columnIdx === -1) {
             throw new Error(`Column ${columnName} not found.`);
@@ -83,14 +84,14 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
             return newRow;
         });
 
-        return new DataFrameStructure({ columns: newColumns, data: newData });
+        return new DataFrame({ columns: newColumns, data: newData });
     }
 
-    protected _select(...columns: string[]): DataFrameStructure {
+    protected _select(...columns: string[]): DataFrame {
         const selectedColumns = this.columns.filter((col) => columns.includes(col));
         const selectedData = this.data.map((row) => row.filter((_, idx) =>
             columns.includes(this.columns[idx])));
-        return new DataFrameStructure({ columns: selectedColumns, data: selectedData });
+        return new DataFrame({ columns: selectedColumns, data: selectedData });
     }
 
 

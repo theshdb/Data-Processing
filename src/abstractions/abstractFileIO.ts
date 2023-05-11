@@ -1,4 +1,4 @@
-import DataFrame from "../combine";
+import DataFrame from "../implementations/dataFrame";
 import { DataFrameStructure } from "../implementations/dataFrameStructure";
 
 export abstract class AbstractFileIO {

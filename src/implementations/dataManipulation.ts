@@ -1,4 +1,4 @@
-import { DataFrameStructure } from "./dataFrameStructure";
+import DataFrame from '../implementations/dataFrame';
 import { DataFrameRow, SortOrder } from '../abstractions';
 import { AbstractDataManipulation } from "../abstractions/abstractDataManipulation";
 import { GroupBy } from "./groupBy";
@@ -6,7 +6,7 @@ import { GroupBy } from "./groupBy";
 
 export class DataManipulation extends AbstractDataManipulation {
 
-    protected _addColumns(columnName: string, column1: string, column2: string): DataFrameStructure {
+    protected _addColumns(columnName: string, column1: string, column2: string): DataFrame {
         const data = this.data.map(row => [...row]);
 
         for (let i = 0; i < this.rows; i++) {
@@ -16,11 +16,11 @@ export class DataManipulation extends AbstractDataManipulation {
         }
 
         const columns = [...this.columns, columnName];
-        return new DataFrameStructure({ columns, data });
+        return new DataFrame({ columns, data });
     }
 
 
-    protected _filter(predicate: (row: DataFrameRow) => boolean): DataFrameStructure {
+    protected _filter(predicate: (row: DataFrameRow) => boolean): DataFrame {
         const filteredData = this.data.filter((row) => {
             const rowData: DataFrameRow = {};
             this.columns.forEach((column, columnIndex) => {
@@ -29,16 +29,16 @@ export class DataManipulation extends AbstractDataManipulation {
 
             return predicate(rowData);
         });
-        return new DataFrameStructure({ columns: this.columns, data: filteredData });
+        return new DataFrame({ columns: this.columns, data: filteredData });
     }
 
 
-    protected _groupBy(dataFrame: DataFrameStructure, ...columns: string[]): GroupBy {
-        return new GroupBy(dataFrame, ...columns);
+    protected _groupBy(dataFrame: DataFrame, columns: string[]): GroupBy {
+        return new GroupBy(dataFrame, columns);
 
     }
 
-    protected _sort(columns: string[], orders: ('asc' | 'desc')[] = []): DataFrameStructure {
+    protected _sort(columns: string[], orders: ('asc' | 'desc')[] = []): DataFrame {
 
         const sortOrders: SortOrder = columns.map((column, index) => ({
             column,
@@ -63,7 +63,7 @@ export class DataManipulation extends AbstractDataManipulation {
             return compareResult;
         });
 
-        return new DataFrameStructure({
+        return new DataFrame({
             columns: this.columns,
             data: sortedData,
         });
