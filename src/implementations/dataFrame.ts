@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import { DataFrameOptions } from '../abstractions';
 import { StatisticalOps } from './statisticalOps';
 

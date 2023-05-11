@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import { DataFrameOptions, DataFrameRow } from '../abstractions';
 import { AbstractDataFrameStructure } from '../abstractions/abstractDataFrame';
 import DataFrame from './dataFrame';

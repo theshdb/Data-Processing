@@ -5,7 +5,6 @@
         "outDir": "dist",
         "noImplicitAny": false,
         "sourceMap": true,
-        "suppressExcessPropertyErrors": true
     },
     "include": [
         "src/**/*.ts"
