@@ -1,3 +1,4 @@
+import DataFrame from "./combine";
 import { DataFrameStructure } from "./implementations/dataFrameStructure";
 import { DataManipulation } from "./implementations/dataManipulation";
 import { FileIO } from "./implementations/fileIO";
@@ -58,3 +59,16 @@ const dfCsv = new FileIO();
 // console.log(dfN.toString());
 
 
+// const dataFrame = new DataFrame({
+//     columns: ['name', 'age', 'gender'],
+//     data: [
+//         ['Alice', 25, 'female'],
+//         ['Bob', 35, 'male'],
+//         ['Charlie', 30, 'male'],
+//     ],
+// })
+
+const dataFrame: DataFrame = DataFrame.fromJSON('/Users/theshdb/Desktop/Data Ops/test3.json');
+// console.log(dataFrame.toString());
+const grp = dataFrame.groupBy(dataFrame, ...['gender'])
+// console.log(grp.sum('age'));

@@ -28,6 +28,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "csv-parser": "^3.0.0"
+    "csv-parser": "^3.0.0",
+    "ts-mixer": "^6.0.3"
   }
 }

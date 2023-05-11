@@ -1,10 +1,11 @@
 import { AbstractFileIO } from '../abstractions/abstractFileIO';
+import DataFrame from '../combine';
 import { DataFrameStructure } from './dataFrameStructure';
 import fs from "fs";
 
 export class FileIO extends AbstractFileIO {
 
-    protected _fromCSV(path: string): DataFrameStructure {
+    protected _fromCSV(path: string): DataFrame {
         const data: string = fs.readFileSync(path, { encoding: "utf-8" });
         const lines: string[] = data.trim().split("\n");
         const columns = lines.shift()?.split(",");
@@ -16,12 +17,12 @@ export class FileIO extends AbstractFileIO {
             return line.split(",");
         });
 
-        const dataFrameStructure: DataFrameStructure = new DataFrameStructure({ columns: columns, data: rows })
+        const dataFrame: DataFrame = new DataFrame({ columns: columns, data: rows })
 
-        return dataFrameStructure
+        return dataFrame
     }
 
-    protected _fromJSON(path: string): DataFrameStructure {
+    protected _fromJSON(path: string): DataFrame {
         const data: string = fs.readFileSync(path, { encoding: "utf-8" });
         const json = JSON.parse(data);
         let rows: any[][] = [];
@@ -31,8 +32,8 @@ export class FileIO extends AbstractFileIO {
             let row = Object.values(json[key]);
             rows.push(row);
         }
-        const dataFrameStructure: DataFrameStructure = new DataFrameStructure({ columns: columns, data: rows })
-        return dataFrameStructure
+        const dataFrame: DataFrame = new DataFrame({ columns: columns, data: rows })
+        return dataFrame
     }
 
 }
