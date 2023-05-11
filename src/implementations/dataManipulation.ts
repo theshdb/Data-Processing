@@ -6,8 +6,8 @@ import { GroupBy } from "./groupBy";
 
 export class DataManipulation extends AbstractDataManipulation {
 
-    addColumn(columnName: string, column1: string, column2: string): DataFrame {
-        const data = this._data.map(row => [...row]); // create a copy of the existing data array
+    protected _addColumns(columnName: string, column1: string, column2: string): DataFrame {
+        const data = this._data.map(row => [...row]);
 
         for (let i = 0; i < this.rows; i++) {
             const value1 = this._data[i][this._columns.indexOf(column1)];
@@ -33,7 +33,7 @@ export class DataManipulation extends AbstractDataManipulation {
     }
 
 
-    protected _gropuBy(dataFrame: DataFrame, ...columns: string[]): GroupBy {
+    protected _groupBy(dataFrame: DataFrame, ...columns: string[]): GroupBy {
         return new GroupBy(dataFrame, ...columns);
 
     }
