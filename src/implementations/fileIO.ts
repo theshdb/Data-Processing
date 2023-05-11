@@ -35,7 +35,4 @@ export class FileIO extends AbstractFileIO {
         return dataFrameStructure
     }
 
-
-
-
 }

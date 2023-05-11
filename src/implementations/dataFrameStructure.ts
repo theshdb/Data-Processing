@@ -1,5 +1,6 @@
 import { DataFrameOptions, DataFrameRow } from '../abstractions';
 import { AbstractDataFrameStructure } from '../abstractions/abstractDataFrame';
+import fs from 'fs';
 
 export class DataFrameStructure extends AbstractDataFrameStructure {
 
@@ -135,4 +136,29 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
         return `DataFrame\nShape: ${shape}\n${this.columns.join('\t\t')}\n\n\n${rows}`;
     }
 
+    protected _toJSON(path: string): void {
+        let jsonData: any = [];
+
+        for (const row of this.data) {
+            let rowObj: { [key: string]: any } = {};
+            for (const col in this.columns) {
+                rowObj[this.columns[col]] = row[col];
+            }
+            jsonData.push(rowObj);
+        }
+
+        fs.writeFile(path, JSON.stringify(jsonData), (err) => {
+            if (err) {
+                throw err;
+            }
+        });
+    }
+
+    protected _toCSV(path: string): void {
+        let data = [this.columns]
+        data = [...data, ...this.data]
+        const csv = data.map(row => row.join(',')).join('\n');
+
+        fs.writeFileSync(path, csv);
+    }
 }

@@ -55,6 +55,15 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
         return this._details();
     }
 
+    public toCSV(path: string): void {
+        this._toCSV(path);
+    }
+
+    public toJSON(path: string): void {
+        this._toJSON(path);
+    }
+
+
     abstract [Symbol.iterator](): IterableIterator<DataFrameRow>
 
     protected abstract _head(n?: number): DataFrameStructure
@@ -72,6 +81,10 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
     protected abstract _details(): string;
 
     protected abstract _toString(): string;
+
+    protected abstract _toCSV(path: string): void;
+
+    protected abstract _toJSON(path: string): void;
 
 
 }

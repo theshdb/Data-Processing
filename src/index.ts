@@ -13,6 +13,9 @@ const df: DataFrameStructure = new DataFrameStructure({
     ],
 });
 
+// df.toJSON('/Users/theshdb/Desktop/Data Ops/test_json.json')
+df.toCSV('/Users/theshdb/Desktop/Data Ops/test_csv.csv')
+
 // console.log("" + df);
 // console.log(df.to_String() + '\n\n\n');
 
@@ -50,6 +53,8 @@ const newDf: StatisticalOps = new StatisticalOps({
 
 
 const dfCsv = new FileIO();
-const dfN = dfCsv.fromJSON('/Users/theshdb/Desktop/Data Ops/test2.json');
-console.log(dfN.toString());
+// const dfN = dfCsv.fromJSON('/Users/theshdb/Desktop/Data Ops/test3.json');
+
+// console.log(dfN.toString());
+
 
