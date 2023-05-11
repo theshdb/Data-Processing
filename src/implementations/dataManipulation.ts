@@ -1,13 +1,15 @@
+import { SortOrder } from '../abstractions';
+import { AbstractDataManipulation } from '../abstractions/abstractDataManipulation';
 import DataFrame from '../implementations/dataFrame';
-import { DataFrameRow, SortOrder } from '../abstractions';
-import { AbstractDataManipulation } from "../abstractions/abstractDataManipulation";
-import { GroupBy } from "./groupBy";
-
+import { GroupBy } from './groupBy';
 
 export class DataManipulation extends AbstractDataManipulation {
-
-    protected _addColumns(columnName: string, column1: string, column2: string): DataFrame {
-        const data = this.data.map(row => [...row]);
+    protected _addColumns(
+        columnName: string,
+        column1: string,
+        column2: string,
+    ): DataFrame {
+        const data = this.data.map((row) => [...row]);
 
         for (let i = 0; i < this.rows; i++) {
             const value1 = this.data[i][this.columns.indexOf(column1)];
@@ -19,27 +21,26 @@ export class DataManipulation extends AbstractDataManipulation {
         return new DataFrame({ columns, data });
     }
 
+    protected _filter(column: string, value: string | number): DataFrame {
 
-    protected _filter(predicate: (row: DataFrameRow) => boolean): DataFrame {
-        const filteredData = this.data.filter((row) => {
-            const rowData: DataFrameRow = {};
-            this.columns.forEach((column, columnIndex) => {
-                rowData[column] = row[columnIndex];
-            });
+        const rows: any[][] = []
 
-            return predicate(rowData);
-        });
-        return new DataFrame({ columns: this.columns, data: filteredData });
+        for (const row of this.data) {
+            if (row[this.columns.indexOf(column)] === value) {
+                rows.push(row)
+            }
+        }
+        return new DataFrame({ columns: this.columns, data: rows });
     }
-
 
     protected _groupBy(dataFrame: DataFrame, columns: string[]): GroupBy {
         return new GroupBy(dataFrame, columns);
-
     }
 
-    protected _sort(columns: string[], orders: ('asc' | 'desc')[] = []): DataFrame {
-
+    protected _sort(
+        columns: string[],
+        orders: ('asc' | 'desc')[] = [],
+    ): DataFrame {
         const sortOrders: SortOrder = columns.map((column, index) => ({
             column,
             order: orders[index] || 'asc',
@@ -68,6 +69,4 @@ export class DataManipulation extends AbstractDataManipulation {
             data: sortedData,
         });
     }
-
-
 }

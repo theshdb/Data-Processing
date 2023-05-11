@@ -1,16 +1,14 @@
-import { GroupedData } from ".";
+import { GroupedData } from '.';
 
 export abstract class AbstractGroupBy {
-
     protected _groupedData: GroupedData;
 
     constructor(groups: GroupedData) {
         this._groupedData = groups;
-
     }
 
     get groupedData() {
-        return this._groupedData
+        return this._groupedData;
     }
 
     public count() {
@@ -33,15 +31,13 @@ export abstract class AbstractGroupBy {
         return this._min(column);
     }
 
-    protected abstract _count(): { [key: string]: number }
+    protected abstract _count(): { [key: string]: number };
 
-    protected abstract _max(column: string): { [key: string]: number }
+    protected abstract _max(column: string): { [key: string]: number };
 
-    protected abstract _mean(column: string): { [key: string]: number }
+    protected abstract _mean(column: string): { [key: string]: number };
 
-    protected abstract _min(column: string): { [key: string]: number }
+    protected abstract _min(column: string): { [key: string]: number };
 
-    protected abstract _sum(column: string): { [key: string]: number }
-
-
+    protected abstract _sum(column: string): { [key: string]: number };
 }

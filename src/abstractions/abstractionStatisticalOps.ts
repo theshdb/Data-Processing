@@ -1,8 +1,7 @@
-import { DataFrameStructure } from "../implementations/dataFrameStructure";
-import { DataManipulation } from "../implementations/dataManipulation";
+import { DataFrameStructure } from '../implementations/dataFrameStructure';
+import { DataManipulation } from '../implementations/dataManipulation';
 
 export abstract class AbstractionStatisticalOps extends DataManipulation {
-
     public mean(columns: string[]): { [key: string]: number } {
         return this._mean(columns);
     }
@@ -13,7 +12,6 @@ export abstract class AbstractionStatisticalOps extends DataManipulation {
 
     public mode(columns: string[]): { [key: string]: number } {
         return this._mode(columns);
-
     }
 
     public standardDeviation(columns: string[]): { [key: string]: number } {
@@ -26,7 +24,7 @@ export abstract class AbstractionStatisticalOps extends DataManipulation {
 
     protected abstract _mode(columns: string[]): { [key: string]: number };
 
-    protected abstract _standardDeviation(columns: string[]): { [key: string]: number };
+    protected abstract _standardDeviation(columns: string[]): {
+        [key: string]: number;
+    };
 }
-
-

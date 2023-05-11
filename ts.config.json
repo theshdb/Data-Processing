@@ -4,7 +4,8 @@
         "module": "commonjs",
         "outDir": "dist",
         "noImplicitAny": false,
-        "sourceMap": true
+        "sourceMap": true,
+        "suppressExcessPropertyErrors": true
     },
     "include": [
         "src/**/*.ts"

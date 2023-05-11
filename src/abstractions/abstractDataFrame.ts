@@ -1,9 +1,7 @@
-import { DataFrameIterator, DataFrameOptions, DataFrameRow } from ".";
-import DataFrame from '../implementations/dataFrame'
-
+import { DataFrameIterator, DataFrameOptions, DataFrameRow } from '.';
+import DataFrame from '../implementations/dataFrame';
 
 export abstract class AbstractDataFrameStructure implements DataFrameIterator {
-
     protected abstract _columns: string[];
     protected abstract _data: any[][];
 
@@ -27,7 +25,10 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
         return this._head(n);
     }
 
-    public renameColumn(oldColumnName: string, newColumnName: string): DataFrame {
+    public renameColumn(
+        oldColumnName: string,
+        newColumnName: string,
+    ): DataFrame {
         return this._renameColumn(oldColumnName, newColumnName);
     }
 
@@ -63,20 +64,22 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
         this._toJSON(path);
     }
 
+    abstract [Symbol.iterator](): IterableIterator<DataFrameRow>;
 
-    abstract [Symbol.iterator](): IterableIterator<DataFrameRow>
+    protected abstract _head(n?: number): DataFrame;
 
-    protected abstract _head(n?: number): DataFrame
+    protected abstract _tail(n?: number): DataFrame;
 
-    protected abstract _tail(n?: number): DataFrame
+    protected abstract _getColumnTypes(): { [column: string]: string };
 
-    protected abstract _getColumnTypes(): { [column: string]: string }
+    protected abstract _renameColumn(
+        oldColumnName: string,
+        newColumnName: string,
+    ): DataFrame;
 
-    protected abstract _renameColumn(oldColumnName: string, newColumnName: string): DataFrame
+    protected abstract _dropColumn(columnName: string): DataFrame;
 
-    protected abstract _dropColumn(columnName: string): DataFrame
-
-    protected abstract _select(...columns: string[]): DataFrame
+    protected abstract _select(...columns: string[]): DataFrame;
 
     protected abstract _details(): string;
 
@@ -85,6 +88,4 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
     protected abstract _toCSV(path: string): void;
 
     protected abstract _toJSON(path: string): void;
-
-
 }

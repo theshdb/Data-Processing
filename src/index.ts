@@ -1,4 +1,1 @@
-export * from './implementations/dataFrame'
-export * from './abstractions/index'
-
-
+export * from './implementations/dataFrame';

@@ -1,4 +1,4 @@
-import DataFrame from "../implementations/dataFrame";
+import DataFrame from '../implementations/dataFrame';
 
 export interface DataFrameOptions {
     columns: string[];
