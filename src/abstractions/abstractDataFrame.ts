@@ -1,4 +1,4 @@
-import { DataFrameIterator, DataFrameOptions, DataFrameRow } from '.';
+import { DataFrameIterator, DataFrameOptions, DataFrameRow } from './interfaces';
 import DataFrame from '../implementations/dataFrame';
 
 export abstract class AbstractDataFrameStructure implements DataFrameIterator {
@@ -36,8 +36,8 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
         return this._data.length;
     }
 
-    public select(...columns: string[]): DataFrame {
-        return this._select(...columns);
+    public select(columns: string[]): DataFrame {
+        return this._select(columns);
     }
 
     get shape(): [number, number] {
@@ -79,7 +79,7 @@ export abstract class AbstractDataFrameStructure implements DataFrameIterator {
 
     protected abstract _dropColumn(columnName: string): DataFrame;
 
-    protected abstract _select(...columns: string[]): DataFrame;
+    protected abstract _select(columns: string[]): DataFrame;
 
     protected abstract _details(): string;
 
