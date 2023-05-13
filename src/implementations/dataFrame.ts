@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { DataFrameOptions } from '../abstractions';
+import { DataFrameOptions } from '../abstractions/interfaces';
 import { StatisticalOps } from './statisticalOps';
 
 export default class DataFrame extends StatisticalOps {

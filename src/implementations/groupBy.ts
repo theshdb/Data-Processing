@@ -1,4 +1,4 @@
-import { GroupedData } from '../abstractions';
+import { GroupedData } from '../abstractions/interfaces';
 import { AbstractGroupBy } from '../abstractions/abstractGroupBy';
 import DataFrame from './dataFrame';
 

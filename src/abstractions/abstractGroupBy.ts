@@ -1,4 +1,4 @@
-import { GroupedData } from '.';
+import { GroupedData } from './interfaces';
 
 export abstract class AbstractGroupBy {
     protected _groupedData: GroupedData;

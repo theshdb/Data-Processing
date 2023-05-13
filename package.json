@@ -2,21 +2,36 @@
   "name": "data-ops",
   "version": "1.0.0",
   "description": "A high-level data processing library similar to Pandas in Python which provide basic functionality for handling and manipulating structured data ",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prettier": "prettier --write \"src/**/*.{js,ts}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "prepare": "npm run build",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "nodemon"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theshdb/Data-Processing"
+  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Mohd Shadab <sdhb0011@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theshdb/Data-Processing/issues"
+  },
+  "homepage": "https://github.com/theshdb/Data-Processing#readme",
+  "files": [
+    "dist/**/*"
+  ],
   "devDependencies": {
+    "@types/jest": "^29.5.1",
     "jest": "^29.5.0",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   }

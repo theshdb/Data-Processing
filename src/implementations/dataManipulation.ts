@@ -1,4 +1,4 @@
-import { SortOrder } from '../abstractions';
+import { SortOrder } from '../abstractions/interfaces';
 import { AbstractDataManipulation } from '../abstractions/abstractDataManipulation';
 import DataFrame from '../implementations/dataFrame';
 import { GroupBy } from './groupBy';

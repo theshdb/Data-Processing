@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { DataFrameOptions, DataFrameRow } from '../abstractions';
+import { DataFrameOptions, DataFrameRow } from '../abstractions/interfaces';
 import { AbstractDataFrameStructure } from '../abstractions/abstractDataFrame';
 import DataFrame from './dataFrame';
 
@@ -91,7 +91,7 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
         return new DataFrame({ columns: newColumns, data: newData });
     }
 
-    protected _select(...columns: string[]): DataFrame {
+    protected _select(columns: string[]): DataFrame {
         const selectedColumns = this.columns.filter((col) =>
             columns.includes(col),
         );
@@ -126,7 +126,7 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
         const maxRows = 10;
         const numRows = this.data.length;
         const numCols = this.columns.length;
-        const shape = `(${numRows}, ${numCols})`;
+        const shape = `(${this.shape})`;
 
         if (numRows < 10) {
             rows = this._details();
