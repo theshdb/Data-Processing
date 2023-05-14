@@ -22,7 +22,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">DataFrame</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrame.ts#L5">implementations/dataFrame.ts:5</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrame.ts#L5">implementations/dataFrame.ts:5</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -93,15 +93,22 @@
 <ul class="tsd-signatures">
 <li class="tsd-signature tsd-anchor-link" id="constructor.new_DataFrame"><span class="tsd-kind-constructor-signature">new <wbr/>Data<wbr/>Frame</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#constructor.new_DataFrame" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Creates a new DataFrame instance.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">df</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">DataFrame</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">columns:</span><span class="hl-1"> [</span><span class="hl-5">&#39;Name&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Age&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Gender&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">  </span><span class="hl-4">data:</span><span class="hl-1"> [</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Alice&#39;</span><span class="hl-1">, </span><span class="hl-6">30</span><span class="hl-1">, </span><span class="hl-5">&#39;Female&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Bob&#39;</span><span class="hl-1">, </span><span class="hl-6">25</span><span class="hl-1">, </span><span class="hl-5">&#39;Male&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Charlie&#39;</span><span class="hl-1">, </span><span class="hl-6">40</span><span class="hl-1">, </span><span class="hl-5">&#39;Male&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">  ],</span><br/><span class="hl-1">});</span>
+</code><button>Copy</button></pre>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">options</span>: <a href="../interfaces/DataFrameOptions.html" class="tsd-signature-type tsd-kind-interface">DataFrameOptions</a></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">options</span>: <a href="../interfaces/DataFrameOptions.html" class="tsd-signature-type tsd-kind-interface">DataFrameOptions</a></h5>
+<div class="tsd-comment tsd-typography"><p>The options for creating the DataFrame.</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Overrides StatisticalOps.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrame.ts#L6">implementations/dataFrame.ts:6</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrame.ts#L23">implementations/dataFrame.ts:23</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_columns" class="tsd-anchor"></a>
@@ -109,13 +116,13 @@
 <div class="tsd-signature"><span class="tsd-kind-property">_columns</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._columns</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L7">implementations/dataFrameStructure.ts:7</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L7">implementations/dataFrameStructure.ts:7</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_data" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_data</span><a href="#_data" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._data</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L8">implementations/dataFrameStructure.ts:8</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L8">implementations/dataFrameStructure.ts:8</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="columns" class="tsd-anchor"></a>
@@ -123,41 +130,61 @@
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature" id="columns.columns-1"><span class="tsd-signature-symbol">get</span> columns<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>The columns in the  data frame.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Gives an array of column names.</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">columns</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-4">columns</span><span class="hl-1">; </span><span class="hl-7">//[&#39;name&#39;, &#39;age&#39;, &#39;gender&#39;]</span>
+</code><button>Copy</button></pre>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4><p>An array of column names.</p>
+<aside class="tsd-sources">
 <p>Inherited from StatisticalOps.columns</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L20">abstractions/abstractDataFrameStructure.ts:20</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L31">abstractions/abstractDataFrameStructure.ts:31</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="data" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>data</span><a href="#data" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature" id="data.data-1"><span class="tsd-signature-symbol">get</span> data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>The columns in the  data frame.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Gives a 2D array .</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">data</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-4">data</span><span class="hl-1">; </span><span class="hl-7">//[[&#39;Alice&#39;, 30, &#39;Female&#39;], [&#39;Bob&#39;, 25, &#39;Male&#39;], [&#39;Charlie&#39;, 40, &#39;Male&#39;]];</span>
+</code><button>Copy</button></pre>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4><p>A two dimensional array of data representing rows of the data frame.</p>
+<aside class="tsd-sources">
 <p>Inherited from StatisticalOps.data</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L24">abstractions/abstractDataFrameStructure.ts:24</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L44">abstractions/abstractDataFrameStructure.ts:44</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="rows" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rows</span><a href="#rows" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature" id="rows.rows-1"><span class="tsd-signature-symbol">get</span> rows<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The number of rows in the data frame.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Gives the number of rows in the data frame.</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">rows</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-4">rows</span><span class="hl-1">; </span><span class="hl-7">//3</span>
+</code><button>Copy</button></pre>
 </div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><p>The number of rows in the data frame.</p>
+<aside class="tsd-sources">
 <p>Inherited from StatisticalOps.rows</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L74">abstractions/abstractDataFrameStructure.ts:74</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L140">abstractions/abstractDataFrameStructure.ts:140</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="shape" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>shape</span><a href="#shape" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature" id="shape.shape-1"><span class="tsd-signature-symbol">get</span> shape<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The shape of the data frame as a tuple of [number of rows, number of columns].</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">shape</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-4">shape</span><span class="hl-1">; </span><span class="hl-7">// [3, 2]</span>
+</code><button>Copy</button></pre>
 </div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></h4><p>A tuple of [number of rows, number of columns].</p>
+<aside class="tsd-sources">
 <p>Inherited from StatisticalOps.shape</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L91">abstractions/abstractDataFrameStructure.ts:91</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L168">abstractions/abstractDataFrameStructure.ts:168</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="_iterator_" class="tsd-anchor"></a>
@@ -168,7 +195,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">IterableIterator</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/DataFrameRow.html" class="tsd-signature-type tsd-kind-interface">DataFrameRow</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps.[iterator]</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L16">implementations/dataFrameStructure.ts:16</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L16">implementations/dataFrameStructure.ts:16</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_addColumns" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_add<wbr/>Columns</span><a href="#_addColumns" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -186,7 +213,7 @@
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._addColumns</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataManipulation.ts#L7">implementations/dataManipulation.ts:7</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataManipulation.ts#L7">implementations/dataManipulation.ts:7</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_details" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_details</span><a href="#_details" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -195,7 +222,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._details</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L104">implementations/dataFrameStructure.ts:104</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L104">implementations/dataFrameStructure.ts:104</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_dropColumn" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_drop<wbr/>Column</span><a href="#_dropColumn" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -209,7 +236,7 @@
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._dropColumn</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L78">implementations/dataFrameStructure.ts:78</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L78">implementations/dataFrameStructure.ts:78</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_filter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_filter</span><a href="#_filter" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -225,7 +252,7 @@
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._filter</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataManipulation.ts#L24">implementations/dataManipulation.ts:24</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataManipulation.ts#L24">implementations/dataManipulation.ts:24</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_getColumnTypes" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_get<wbr/>Column<wbr/>Types</span><a href="#_getColumnTypes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -237,7 +264,7 @@
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">column</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._getColumnTypes</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L47">implementations/dataFrameStructure.ts:47</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L47">implementations/dataFrameStructure.ts:47</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_groupBy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_group<wbr/>By</span><a href="#_groupBy" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -253,7 +280,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">GroupBy</span></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._groupBy</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataManipulation.ts#L36">implementations/dataManipulation.ts:36</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataManipulation.ts#L36">implementations/dataManipulation.ts:36</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_head" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_head</span><a href="#_head" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -267,7 +294,7 @@
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._head</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L37">implementations/dataFrameStructure.ts:37</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L37">implementations/dataFrameStructure.ts:37</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_mean" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_mean</span><a href="#_mean" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -284,7 +311,7 @@
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._mean</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/statisticalOps.ts#L4">implementations/statisticalOps.ts:4</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/statisticalOps.ts#L4">implementations/statisticalOps.ts:4</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_median" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_median</span><a href="#_median" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -301,7 +328,7 @@
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._median</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/statisticalOps.ts#L18">implementations/statisticalOps.ts:18</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/statisticalOps.ts#L18">implementations/statisticalOps.ts:18</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_mode" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_mode</span><a href="#_mode" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -318,7 +345,7 @@
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._mode</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/statisticalOps.ts#L35">implementations/statisticalOps.ts:35</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/statisticalOps.ts#L35">implementations/statisticalOps.ts:35</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_renameColumn" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_rename<wbr/>Column</span><a href="#_renameColumn" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -334,7 +361,7 @@
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._renameColumn</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L58">implementations/dataFrameStructure.ts:58</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L58">implementations/dataFrameStructure.ts:58</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_select" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_select</span><a href="#_select" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -348,7 +375,7 @@
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._select</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L94">implementations/dataFrameStructure.ts:94</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L94">implementations/dataFrameStructure.ts:94</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_sort" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_sort</span><a href="#_sort" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -364,7 +391,7 @@
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._sort</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataManipulation.ts#L40">implementations/dataManipulation.ts:40</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataManipulation.ts#L40">implementations/dataManipulation.ts:40</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_standardDeviation" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_standard<wbr/>Deviation</span><a href="#_standardDeviation" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -381,7 +408,7 @@
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._standardDeviation</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/statisticalOps.ts#L61">implementations/statisticalOps.ts:61</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/statisticalOps.ts#L61">implementations/statisticalOps.ts:61</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_tail" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_tail</span><a href="#_tail" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -395,7 +422,7 @@
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._tail</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L42">implementations/dataFrameStructure.ts:42</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L42">implementations/dataFrameStructure.ts:42</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_toCSV" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_toCSV</span><a href="#_toCSV" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -409,7 +436,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._toCSV</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L193">implementations/dataFrameStructure.ts:193</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L193">implementations/dataFrameStructure.ts:193</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_toJSON" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_toJSON</span><a href="#_toJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -423,7 +450,7 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._toJSON</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L175">implementations/dataFrameStructure.ts:175</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L175">implementations/dataFrameStructure.ts:175</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-protected tsd-is-inherited"><a id="_toString" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_to<wbr/>String</span><a href="#_toString" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-protected tsd-is-inherited">
@@ -432,13 +459,16 @@
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <p>Inherited from StatisticalOps._toString</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrameStructure.ts#L124">implementations/dataFrameStructure.ts:124</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrameStructure.ts#L124">implementations/dataFrameStructure.ts:124</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="addColumns" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Columns</span><a href="#addColumns" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="addColumns.addColumns-1"><span class="tsd-kind-call-signature">add<wbr/>Columns</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">columnName</span>, <span class="tsd-kind-parameter">column1</span>, <span class="tsd-kind-parameter">column2</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#addColumns.addColumns-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Adds two columns together and returns the result as a new DataFrame object.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Add a new column whose values = sum(&#39;col1&#39;, &#39;col2&#39;)</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">addColumns</span><span class="hl-1">(</span><span class="hl-5">&quot;col1 + col2&quot;</span><span class="hl-1">, </span><span class="hl-5">&quot;col1&quot;</span><span class="hl-1">, </span><span class="hl-5">&quot;col2&quot;</span><span class="hl-1">);</span><br/><br/><span class="hl-7">//Output:</span><br/><span class="hl-1">   </span><span class="hl-4">col1</span><span class="hl-1">  </span><span class="hl-4">col2</span><span class="hl-1">  </span><span class="hl-4">col1</span><span class="hl-1"> + </span><span class="hl-4">col2</span><br/><span class="hl-1"> </span><span class="hl-6">1</span><span class="hl-1">    </span><span class="hl-6">1</span><span class="hl-1">    </span><span class="hl-6">2</span><span class="hl-1">      </span><span class="hl-6">3</span><br/><span class="hl-1"> </span><span class="hl-6">2</span><span class="hl-1">    </span><span class="hl-6">2</span><span class="hl-1">    </span><span class="hl-6">3</span><span class="hl-1">      </span><span class="hl-6">5</span><br/><span class="hl-1"> </span><span class="hl-6">3</span><span class="hl-1">    </span><span class="hl-6">3</span><span class="hl-1">    </span><span class="hl-6">4</span><span class="hl-1">      </span><span class="hl-6">7</span><br/><span class="hl-1"> </span><span class="hl-6">4</span><span class="hl-1">    </span><span class="hl-6">4</span><span class="hl-1">    </span><span class="hl-6">5</span><span class="hl-1">      </span><span class="hl-6">9</span><br/><span class="hl-1"> </span><span class="hl-6">5</span><span class="hl-1">    </span><span class="hl-6">5</span><span class="hl-1">    </span><span class="hl-6">6</span><span class="hl-1">      </span><span class="hl-6">11</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -459,7 +489,7 @@
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.addColumns</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataManipulation.ts#L18">abstractions/abstractDataManipulation.ts:18</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataManipulation.ts#L30">abstractions/abstractDataManipulation.ts:30</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="details" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>details</span><a href="#details" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -467,18 +497,24 @@
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Returns a detailed string representation of the data frame.
 Prints all rows.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Print complete rows/data of the data frame.</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-3">log</span><span class="hl-1">(</span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">details</span><span class="hl-1">());</span>
+</code><button>Copy</button></pre>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A detailed string representation of the data frame.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.details</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L120">abstractions/abstractDataFrameStructure.ts:120</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L238">abstractions/abstractDataFrameStructure.ts:238</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="dropColumn" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>drop<wbr/>Column</span><a href="#dropColumn" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="dropColumn.dropColumn-1"><span class="tsd-kind-call-signature">drop<wbr/>Column</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">columnName</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#dropColumn.dropColumn-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Drops a column from the data frame.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Drop age column from the data frame.</span><br/><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">df</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">DataFrame</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">columns:</span><span class="hl-1"> [</span><span class="hl-5">&#39;Name&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Age&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Gender&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">  </span><span class="hl-4">data:</span><span class="hl-1"> [</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Alice&#39;</span><span class="hl-1">, </span><span class="hl-6">30</span><span class="hl-1">, </span><span class="hl-5">&#39;Female&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Bob&#39;</span><span class="hl-1">, </span><span class="hl-6">25</span><span class="hl-1">, </span><span class="hl-5">&#39;Male&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Charlie&#39;</span><span class="hl-1">, </span><span class="hl-6">40</span><span class="hl-1">, </span><span class="hl-5">&#39;Male&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">  ],</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">dropColumn</span><span class="hl-1">(</span><span class="hl-5">&#39;Age&#39;</span><span class="hl-1">);</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-3">log</span><span class="hl-1">(</span><span class="hl-4">newDf</span><span class="hl-1">.</span><span class="hl-4">data</span><span class="hl-1">); </span><span class="hl-7">//[[&#39;Alice&#39;, &#39;Female&#39;], [&#39;Bob&#39;, &#39;Male&#39;], [&#39;Charlie&#39;, &#39;Male&#39;]]</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -491,13 +527,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.dropColumn</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L34">abstractions/abstractDataFrameStructure.ts:34</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L71">abstractions/abstractDataFrameStructure.ts:71</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="filter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>filter</span><a href="#filter" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="filter.filter-1"><span class="tsd-kind-call-signature">filter</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">column</span>, <span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#filter.filter-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Filters the DataFrame object by a column value and returns the filtered DataFrame object.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//filter data frame based on age = 21</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">filter</span><span class="hl-1">(</span><span class="hl-5">&quot;age&quot;</span><span class="hl-1">, </span><span class="hl-6">21</span><span class="hl-1">);</span><br/><br/><span class="hl-7">//Output:</span><br/><span class="hl-1">     </span><span class="hl-4">name</span><span class="hl-1">     </span><span class="hl-4">age</span><br/><span class="hl-1"> </span><span class="hl-6">1</span><span class="hl-1">    </span><span class="hl-4">Jack</span><span class="hl-1">     </span><span class="hl-6">21</span><br/><span class="hl-1"> </span><span class="hl-6">2</span><span class="hl-1">    </span><span class="hl-4">Jone</span><span class="hl-1">     </span><span class="hl-6">21</span><br/><span class="hl-1"> </span><span class="hl-6">3</span><span class="hl-1">    </span><span class="hl-4">Paul</span><span class="hl-1">     </span><span class="hl-6">21</span><br/><span class="hl-1"> </span><span class="hl-6">4</span><span class="hl-1">    </span><span class="hl-4">Tim</span><span class="hl-1">      </span><span class="hl-6">21</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -514,13 +553,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.filter</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataManipulation.ts#L34">abstractions/abstractDataManipulation.ts:34</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataManipulation.ts#L58">abstractions/abstractDataManipulation.ts:58</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="getColumnTypes" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Column<wbr/>Types</span><a href="#getColumnTypes" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="getColumnTypes.getColumnTypes-1"><span class="tsd-kind-call-signature">get<wbr/>Column<wbr/>Types</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">column</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><a href="#getColumnTypes.getColumnTypes-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Returns an object containing the data types of each column in the data frame.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Gives an object containing the data types of each column.</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">columnTypes</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">getColumnTypes</span><span class="hl-1">(); </span><span class="hl-7">// {Name: &#39;string&#39;, Age: &#39;number&#39;, Gender: &#39;string&#39;}</span>
+</code><button>Copy</button></pre>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">column</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></h4><p>An object containing the data types of each column.</p>
 
@@ -529,13 +571,16 @@ Prints all rows.</p>
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">column</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps.getColumnTypes</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L43">abstractions/abstractDataFrameStructure.ts:43</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L85">abstractions/abstractDataFrameStructure.ts:85</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="groupBy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>group<wbr/>By</span><a href="#groupBy" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="groupBy.groupBy-1"><span class="tsd-kind-call-signature">group<wbr/>By</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">dataFrame</span>, <span class="tsd-kind-parameter">columns</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">GroupBy</span><a href="#groupBy.groupBy-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Groups the DataFrame object by one or more columns and returns a GroupBy object.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//group the data frame by gender column</span><br/><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">groupedData</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">groupBy</span><span class="hl-1">(</span><span class="hl-4">df</span><span class="hl-1">, [</span><span class="hl-5">&quot;gender&quot;</span><span class="hl-1">]);</span><br/><br/><span class="hl-7">//Output:</span><br/><span class="hl-1">{</span><br/><span class="hl-1">   </span><span class="hl-8">Female</span><span class="hl-1">: </span><span class="hl-4">DataFrame</span><span class="hl-1"> {</span><br/><span class="hl-1">       </span><span class="hl-8">_columns</span><span class="hl-1">: [ </span><span class="hl-5">&#39;Name&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Age&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Gender&#39;</span><span class="hl-1"> ],</span><br/><span class="hl-1">       </span><span class="hl-8">_data</span><span class="hl-1">: [ [</span><span class="hl-4">Array</span><span class="hl-1">] ]</span><br/><span class="hl-1">   },</span><br/><span class="hl-1">   </span><span class="hl-8">Male</span><span class="hl-1">: </span><span class="hl-4">DataFrame</span><span class="hl-1"> {</span><br/><span class="hl-1">       </span><span class="hl-8">_columns</span><span class="hl-1">: [ </span><span class="hl-5">&#39;Name&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Age&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Gender&#39;</span><span class="hl-1"> ],</span><br/><span class="hl-1">       </span><span class="hl-8">_data</span><span class="hl-1">: [ [</span><span class="hl-4">Array</span><span class="hl-1">], [</span><span class="hl-4">Array</span><span class="hl-1">] ]</span><br/><span class="hl-1">   }</span><br/><span class="hl-1">}</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -552,13 +597,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.groupBy</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataManipulation.ts#L58">abstractions/abstractDataManipulation.ts:58</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataManipulation.ts#L111">abstractions/abstractDataManipulation.ts:111</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="head" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>head</span><a href="#head" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="head.head-1"><span class="tsd-kind-call-signature">head</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">n</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#head.head-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Returns the first n rows of the data frame.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Give a new data frame containing the first 5 rows of the data frame.</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">head</span><span class="hl-1">(); </span><br/><br/><span class="hl-4">or</span><br/><br/><span class="hl-7">//Give a new data frame containing the first 3 rows of the data frame.</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">head</span><span class="hl-1">(</span><span class="hl-6">3</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -571,13 +619,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.head</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L53">abstractions/abstractDataFrameStructure.ts:53</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L105">abstractions/abstractDataFrameStructure.ts:105</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="mean" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mean</span><a href="#mean" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="mean.mean-1"><span class="tsd-kind-call-signature">mean</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">columns</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><a href="#mean.mean-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Calculates the mean of the given columns.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">mean</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">mean</span><span class="hl-1">([</span><span class="hl-5">&#39;age&#39;</span><span class="hl-1">]); </span><span class="hl-7">// { age: 47.5 }</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -593,13 +644,16 @@ Prints all rows.</p>
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps.mean</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractionStatisticalOps.ts#L14">abstractions/abstractionStatisticalOps.ts:14</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractionStatisticalOps.ts#L17">abstractions/abstractionStatisticalOps.ts:17</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="median" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>median</span><a href="#median" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="median.median-1"><span class="tsd-kind-call-signature">median</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">columns</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><a href="#median.median-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Calculates the median of the given columns.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">median</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">median</span><span class="hl-1">([</span><span class="hl-5">&#39;age&#39;</span><span class="hl-1">]); </span><span class="hl-7">// { age: 47 }</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -615,13 +669,16 @@ Prints all rows.</p>
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps.median</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractionStatisticalOps.ts#L24">abstractions/abstractionStatisticalOps.ts:24</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractionStatisticalOps.ts#L31">abstractions/abstractionStatisticalOps.ts:31</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="mode" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mode</span><a href="#mode" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="mode.mode-1"><span class="tsd-kind-call-signature">mode</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">columns</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><a href="#mode.mode-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Calculates the mode of the given columns.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">mode</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">mode</span><span class="hl-1">([</span><span class="hl-5">&#39;age&#39;</span><span class="hl-1">]); </span><span class="hl-7">// { age: 47 }</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -637,13 +694,16 @@ Prints all rows.</p>
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps.mode</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractionStatisticalOps.ts#L34">abstractions/abstractionStatisticalOps.ts:34</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractionStatisticalOps.ts#L45">abstractions/abstractionStatisticalOps.ts:45</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="renameColumn" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rename<wbr/>Column</span><a href="#renameColumn" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="renameColumn.renameColumn-1"><span class="tsd-kind-call-signature">rename<wbr/>Column</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">oldColumnName</span>, <span class="tsd-kind-parameter">newColumnName</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#renameColumn.renameColumn-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Renames a column in the data frame.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Rename age column to newAge.</span><br/><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">renameColumn</span><span class="hl-1">(</span><span class="hl-5">&#39;Age&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;newAge&#39;</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -660,13 +720,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.renameColumn</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L64">abstractions/abstractDataFrameStructure.ts:64</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L123">abstractions/abstractDataFrameStructure.ts:123</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="select" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>select</span><a href="#select" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="select.select-1"><span class="tsd-kind-call-signature">select</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">columns</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#select.select-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Returns a new data frame with only the specified columns.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Gives a new data frame with only the name and age columns.</span><br/><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">select</span><span class="hl-1">([</span><span class="hl-5">&#39;name&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;age&#39;</span><span class="hl-1">]);</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -679,13 +742,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.select</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L84">abstractions/abstractDataFrameStructure.ts:84</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L156">abstractions/abstractDataFrameStructure.ts:156</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="sort" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sort</span><a href="#sort" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="sort.sort-1"><span class="tsd-kind-call-signature">sort</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">columns</span>, <span class="tsd-kind-parameter">orders</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#sort.sort-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Sorts the DataFrame object by one or more columns and returns the sorted DataFrame object.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Sort data frame by age column in descending order.</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">sort</span><span class="hl-1">([</span><span class="hl-5">&quot;age&quot;</span><span class="hl-1">], [</span><span class="hl-5">&quot;desc&quot;</span><span class="hl-1">]);</span><br/><br/><span class="hl-7">//Output:</span><br/><span class="hl-1">     </span><span class="hl-4">name</span><span class="hl-1">     </span><span class="hl-4">age</span><br/><span class="hl-1"> </span><span class="hl-6">1</span><span class="hl-1">    </span><span class="hl-4">Jack</span><span class="hl-1">     </span><span class="hl-6">26</span><br/><span class="hl-1"> </span><span class="hl-6">2</span><span class="hl-1">    </span><span class="hl-4">Jone</span><span class="hl-1">     </span><span class="hl-6">25</span><br/><span class="hl-1"> </span><span class="hl-6">3</span><span class="hl-1">    </span><span class="hl-4">Paul</span><span class="hl-1">     </span><span class="hl-6">22</span><br/><span class="hl-1"> </span><span class="hl-6">4</span><span class="hl-1">    </span><span class="hl-4">Tim</span><span class="hl-1">      </span><span class="hl-6">21</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -702,13 +768,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.sort</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataManipulation.ts#L46">abstractions/abstractDataManipulation.ts:46</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataManipulation.ts#L82">abstractions/abstractDataManipulation.ts:82</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="standardDeviation" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>standard<wbr/>Deviation</span><a href="#standardDeviation" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="standardDeviation.standardDeviation-1"><span class="tsd-kind-call-signature">standard<wbr/>Deviation</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">columns</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><a href="#standardDeviation.standardDeviation-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Calculates the standard deviation of the given columns.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">standardDeviation</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">standardDeviation</span><span class="hl-1">([</span><span class="hl-5">&#39;age&#39;</span><span class="hl-1">]); </span><span class="hl-7">// { age: 4.5 }</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -724,13 +793,16 @@ Prints all rows.</p>
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul><aside class="tsd-sources">
 <p>Inherited from StatisticalOps.standardDeviation</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractionStatisticalOps.ts#L44">abstractions/abstractionStatisticalOps.ts:44</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractionStatisticalOps.ts#L59">abstractions/abstractionStatisticalOps.ts:59</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="tail" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tail</span><a href="#tail" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="tail.tail-1"><span class="tsd-kind-call-signature">tail</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">n</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#tail.tail-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Returns the last n rows of the data frame.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Give a new data frame containing the last 5 rows of the data frame.</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">tail</span><span class="hl-1">(); </span><br/><br/><span class="hl-4">or</span><br/><br/><span class="hl-7">//Give a new data frame containing the last 3 rows of the data frame.</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">newDf</span><span class="hl-1"> = </span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">tail</span><span class="hl-1">(</span><span class="hl-6">3</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -743,13 +815,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.tail</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L101">abstractions/abstractDataFrameStructure.ts:101</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L188">abstractions/abstractDataFrameStructure.ts:188</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="toCSV" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>toCSV</span><a href="#toCSV" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="toCSV.toCSV-1"><span class="tsd-kind-call-signature">toCSV</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#toCSV.toCSV-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Writes the data frame to a CSV file.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Write the data frame to a CSV file.</span><br/><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">toCSV</span><span class="hl-1">(</span><span class="hl-5">&#39;path/to/file.csv&#39;</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -762,13 +837,16 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.toCSV</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L132">abstractions/abstractDataFrameStructure.ts:132</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L255">abstractions/abstractDataFrameStructure.ts:255</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="toJSON" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>toJSON</span><a href="#toJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
 <li class="tsd-signature tsd-anchor-link" id="toJSON.toJSON-1"><span class="tsd-kind-call-signature">toJSON</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#toJSON.toJSON-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Writes the data frame to a JSON file.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">//Write the data frame to a JSON file.</span><br/><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">toJSON</span><span class="hl-1">(</span><span class="hl-5">&#39;path/to/file.json&#39;</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -781,7 +859,7 @@ Prints all rows.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.toJSON</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L142">abstractions/abstractDataFrameStructure.ts:142</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L270">abstractions/abstractDataFrameStructure.ts:270</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited"><a id="toString" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>to<wbr/>String</span><a href="#toString" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited">
@@ -789,12 +867,15 @@ Prints all rows.</p>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Returns a string representation of the data frame.
 Prints only first 5 rows and last 5 rows</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">df</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">DataFrame</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">columns:</span><span class="hl-1"> [</span><span class="hl-5">&#39;Name&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Age&#39;</span><span class="hl-1">, </span><span class="hl-5">&#39;Gender&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">  </span><span class="hl-4">data:</span><span class="hl-1"> [</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Alice&#39;</span><span class="hl-1">, </span><span class="hl-6">30</span><span class="hl-1">, </span><span class="hl-5">&#39;Female&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Bob&#39;</span><span class="hl-1">, </span><span class="hl-6">25</span><span class="hl-1">, </span><span class="hl-5">&#39;Male&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">    [</span><span class="hl-5">&#39;Charlie&#39;</span><span class="hl-1">, </span><span class="hl-6">40</span><span class="hl-1">, </span><span class="hl-5">&#39;Male&#39;</span><span class="hl-1">],</span><br/><span class="hl-1">  ],</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-3">log</span><span class="hl-1">(</span><span class="hl-4">df</span><span class="hl-1">.</span><span class="hl-3">toString</span><span class="hl-1">());</span><br/><br/><span class="hl-7">//Output:</span><br/><br/><span class="hl-4">DataFrame</span><br/><span class="hl-8">Shape</span><span class="hl-1">: (</span><span class="hl-6">3</span><span class="hl-1">,</span><span class="hl-6">3</span><span class="hl-1">)</span><br/><br/><br/><span class="hl-1">   </span><span class="hl-4">Name</span><span class="hl-1">                    </span><span class="hl-4">Age</span><span class="hl-1">                     </span><span class="hl-4">Gender</span><span class="hl-1">    </span><br/><br/><span class="hl-1">  </span><span class="hl-6">1</span><span class="hl-1">       </span><span class="hl-4">Alice</span><span class="hl-1">                   </span><span class="hl-6">30</span><span class="hl-1">                      </span><span class="hl-4">Female</span><span class="hl-1">    </span><br/><span class="hl-1">  </span><span class="hl-6">2</span><span class="hl-1">       </span><span class="hl-4">Bob</span><span class="hl-1">                     </span><span class="hl-6">25</span><span class="hl-1">                      </span><span class="hl-4">Male</span><span class="hl-1">      </span><br/><span class="hl-1">  </span><span class="hl-6">3</span><span class="hl-1">       </span><span class="hl-4">Charlie</span><span class="hl-1">                 </span><span class="hl-6">40</span><span class="hl-1">                      </span><span class="hl-4">Male</span>
+</code><button>Copy</button></pre>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><p>A string representation of the data frame.</p>
 <aside class="tsd-sources">
 <p>Inherited from StatisticalOps.toString</p>
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/abstractions/abstractDataFrameStructure.ts#L110">abstractions/abstractDataFrameStructure.ts:110</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/abstractions/abstractDataFrameStructure.ts#L223">abstractions/abstractDataFrameStructure.ts:223</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="fromCSV" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>fromCSV</span><a href="#fromCSV" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -804,6 +885,9 @@ Prints only first 5 rows and last 5 rows</p>
 
 <h3>Static</h3>
 <h3>Throws</h3><p>If the CSV file is empty.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">// Create a new DataFrame from a CSV file</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">df</span><span class="hl-1"> = </span><span class="hl-4">DataFrame</span><span class="hl-1">.</span><span class="hl-3">fromCSV</span><span class="hl-1">(</span><span class="hl-5">&#39;path/to/file.csv&#39;</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -815,7 +899,7 @@ Prints only first 5 rows and last 5 rows</p>
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><p>A new DataFrame object containing the data from the CSV file.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrame.ts#L44">implementations/dataFrame.ts:44</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrame.ts#L70">implementations/dataFrame.ts:70</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="fromJSON" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>fromJSON</span><a href="#fromJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -824,6 +908,9 @@ Prints only first 5 rows and last 5 rows</p>
 <div class="tsd-comment tsd-typography"><p>Creates a new DataFrame from a JSON file.</p>
 
 <h3>Throws</h3><p>If the JSON file cannot be read or parsed.</p>
+
+<h3>Example</h3><pre><code class="language-ts"><span class="hl-7">// Create a new DataFrame from a JSON file</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">df</span><span class="hl-1"> = </span><span class="hl-4">DataFrame</span><span class="hl-1">.</span><span class="hl-3">fromJSON</span><span class="hl-1">(</span><span class="hl-5">&#39;path/to/file.json&#39;</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -835,7 +922,7 @@ Prints only first 5 rows and last 5 rows</p>
 <h4 class="tsd-returns-title">Returns <a href="DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><p>A new DataFrame object with the data from the JSON file.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/b27c3f5/src/implementations/dataFrame.ts#L17">implementations/dataFrame.ts:17</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/theshdb/Data-Processing/blob/811c20b/src/implementations/dataFrame.ts#L38">implementations/dataFrame.ts:38</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
