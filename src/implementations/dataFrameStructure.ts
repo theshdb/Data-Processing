@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import { DataFrameOptions, DataFrameRow } from '../abstractions/interfaces';
-import { AbstractDataFrameStructure } from '../abstractions/abstractDataFrame';
+import { AbstractDataFrameStructure } from '../abstractions/abstractDataFrameStructure';
 import { DataFrame } from './dataFrame';
 
 export class DataFrameStructure extends AbstractDataFrameStructure {

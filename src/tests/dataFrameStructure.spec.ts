@@ -1,9 +1,29 @@
-import { DataFrameOptions } from '../abstractions/interfaces';
-import { DataFrame } from '../implementations/dataFrame';
+import { DataFrameOptions } from '../index';
+import { DataFrame } from '../index';
 import { DataFrameStructure } from '../implementations/dataFrameStructure';
 import fs from 'fs'
 
-describe('Test DataFrameStructure implementation class', () => {
+describe('Testing DataFrameStructure implementation class', () => {
+    let mockWriteFileSync: jest.SpyInstance
+    let mockWriteFile: jest.SpyInstance
+    let dataFrame: DataFrameStructure;
+
+    beforeAll(() => {
+        dataFrame = new DataFrameStructure(dataFrameOptions);
+        mockWriteFileSync = jest.spyOn(fs, 'writeFileSync');
+        mockWriteFile = jest.spyOn(fs, 'writeFile');
+    })
+
+    beforeEach(() => {
+        mockWriteFileSync.mockClear();
+        mockWriteFile.mockClear();
+    })
+
+    afterAll(() => {
+        mockWriteFileSync.mockRestore();
+        mockWriteFile.mockRestore();
+    })
+
     let dataFrameOptions: DataFrameOptions = {
         columns: ['id', 'name', 'age'],
         data: [
@@ -14,8 +34,7 @@ describe('Test DataFrameStructure implementation class', () => {
     };
 
     it('should create a new instance', () => {
-        const structure = new DataFrameStructure(dataFrameOptions);
-        expect(structure).toBeDefined();
+        expect(dataFrame).toBeDefined();
     });
 
     describe('Test head method', () => {
@@ -29,20 +48,18 @@ describe('Test DataFrameStructure implementation class', () => {
         });
 
         it('Should return top n rows', () => {
-            const structure = new DataFrameStructure(dataFrameOptions);
-            const head: DataFrame = structure.head(2);
+            const head: DataFrame = dataFrame.head(2);
 
             expect(head.data).toEqual(testHeadDataFrame.data);
             expect(head.columns).toEqual(testHeadDataFrame.columns);
         });
 
         it('Should return top 5 rows if n value is not given', () => {
-            const structure = new DataFrameStructure(dataFrameOptions);
-            const head: DataFrame = structure.head();
+            const head: DataFrame = dataFrame.head();
 
-            expect(head.data).toEqual(structure.data);
+            expect(head.data).toEqual(dataFrame.data);
             expect(head.data).not.toEqual(testHeadDataFrame.data);
-            expect(head.columns).toEqual(structure.columns);
+            expect(head.columns).toEqual(dataFrame.columns);
         });
     });
 
@@ -57,45 +74,40 @@ describe('Test DataFrameStructure implementation class', () => {
         });
 
         it('Should return bottom n rows', () => {
-            const structure = new DataFrameStructure(dataFrameOptions);
-            const tail: DataFrame = structure.tail(2);
+            const tail: DataFrame = dataFrame.tail(2);
 
             expect(tail.data).toEqual(testTailDataFrame.data);
             expect(tail.columns).toEqual(testTailDataFrame.columns);
         });
 
         it('Should return bottom 5 rows if n value is not given', () => {
-            const structure = new DataFrameStructure(dataFrameOptions);
-            const tail: DataFrame = structure.tail();
+            const tail: DataFrame = dataFrame.tail();
 
-            expect(tail.data).toEqual(structure.data);
+            expect(tail.data).toEqual(dataFrame.data);
             expect(tail.data).not.toEqual(testTailDataFrame.data);
-            expect(tail.columns).toEqual(structure.columns);
+            expect(tail.columns).toEqual(dataFrame.columns);
         });
     });
 
     it('Should return data type of columns as provided in options', () => {
-        const structure = new DataFrameStructure(dataFrameOptions);
-        expect(structure.getColumnTypes()).toEqual({ 'id': 'number', 'name': 'string', 'age': 'number' });
+        expect(dataFrame.getColumnTypes()).toEqual({ 'id': 'number', 'name': 'string', 'age': 'number' });
     });
 
     it('Should rename a column and return a new DataFrame with updated column name', () => {
-        const structure = new DataFrameStructure(dataFrameOptions);
-        const renamedDataFrame = structure.renameColumn('id', 'userId');
+        const renamedDataFrame = dataFrame.renameColumn('id', 'userId');
         expect(renamedDataFrame.columns).toEqual(['userId', 'name', 'age']);
         expect(renamedDataFrame.getColumnTypes()).toEqual({ 'userId': 'number', 'name': 'string', 'age': 'number' });
     })
 
     it('Should drop asked column and return an updated DataFrame', () => {
-        const dataFrame = new DataFrameStructure(dataFrameOptions);
         const droppedDataFrame = dataFrame.dropColumn('id');
+
         expect(droppedDataFrame.columns).toEqual(['name', 'age']);
         expect(droppedDataFrame.getColumnTypes()).toEqual({ 'name': 'string', 'age': 'number' });
         expect(droppedDataFrame.rows).toEqual(dataFrame.rows);
     });
 
     it('Should return a new DataFrame with selected columns', () => {
-        const dataFrame = new DataFrameStructure(dataFrameOptions);
         const selectedDataFrame = dataFrame.select(['name', 'age']);
 
         expect(selectedDataFrame.columns).toEqual(['name', 'age']);
@@ -104,14 +116,13 @@ describe('Test DataFrameStructure implementation class', () => {
     });
 
     it('Should return row details of the dataFrame', () => {
-        const dataFrame = new DataFrameStructure(dataFrameOptions);
         const dataFrameDetails = dataFrame.details();
+
         expect(typeof dataFrameDetails).toBe('string')
         expect(dataFrameDetails.includes(dataFrame.rows.toString())).toBeTruthy();
     });
 
     it('Should return the dataFrame converted to string', () => {
-        const dataFrame = new DataFrameStructure(dataFrameOptions);
         const dataFrameString = dataFrame.toString();
 
         expect(typeof dataFrameString).toBe('string');
@@ -120,19 +131,19 @@ describe('Test DataFrameStructure implementation class', () => {
     });
 
     it('Should write dataFrame to a CSV file', () => {
-        const dataFrame = new DataFrameStructure(dataFrameOptions);
-        const filePath = './test.csv';
-        dataFrame.toCSV(filePath);
+        mockWriteFileSync.mockImplementation(() => { });
+        dataFrame.toCSV('./test.csv');
 
-        setTimeout(() => { }, 1000)
+        expect(mockWriteFileSync).toHaveBeenCalled();
 
-        expect(fs.existsSync(filePath)).toBeTruthy();
-        fs.unlink(filePath, err => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-        });
-    });
+    })
+
+    it('Should write dataFrame to a JSON file', () => {
+        mockWriteFile.mockImplementation(() => { });
+        dataFrame.toJSON('./test.json');
+
+        expect(mockWriteFile).toHaveBeenCalled();
+
+    })
 
 });
