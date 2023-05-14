@@ -60,6 +60,20 @@ export abstract class AbstractionStatisticalOps extends DataManipulation {
         return this._standardDeviation(columns);
     }
 
+    /**
+     * 
+     * @param {string} firstColumn - The first column to calculate the correlation of.
+     * @param {string} secondColumn - The second column to calculate the correlation of. 
+     * @returns {number} The correlation between the two columns.
+     * 
+     * @example
+     * const correlation = df.correlation('age', 'height'); //0.5
+     */
+
+    public correlation(firstColumn: string, secondColumn: string): number {
+        return this._correlation(firstColumn, secondColumn);
+    }
+
     protected abstract _mean(columns: string[]): { [key: string]: number };
 
     protected abstract _median(columns: string[]): { [key: string]: number };
@@ -69,4 +83,6 @@ export abstract class AbstractionStatisticalOps extends DataManipulation {
     protected abstract _standardDeviation(columns: string[]): {
         [key: string]: number;
     };
+
+    protected abstract _correlation(firstColumn: string, secondColumn: string): number;
 }

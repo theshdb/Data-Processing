@@ -134,4 +134,5 @@ export abstract class AbstractDataManipulation extends DataFrameStructure {
         columns: string[],
         orders: ('asc' | 'desc')[],
     ): DataFrame;
+
 }

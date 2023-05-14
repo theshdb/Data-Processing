@@ -50,7 +50,7 @@ df.toString();
 Create a `DataFrame` from a CSV file
 
 ``` js
-    const df = DataFrame.fromCSV('data.csv');
+const df = DataFrame.fromCSV('data.csv');
 ```
 
 ### Testing and build

@@ -26,7 +26,7 @@ export class StatisticalOps extends AbstractionStatisticalOps {
             );
             result[column] =
                 sorted[Math.floor(sorted.length / 2)][
-                    this.columns.indexOf(column)
+                this.columns.indexOf(column)
                 ];
         }
         return result;
@@ -73,5 +73,33 @@ export class StatisticalOps extends AbstractionStatisticalOps {
             result[column] = Math.sqrt(sum / this.data.length);
         }
         return result;
+    }
+
+    protected _correlation(firstColumn: string, secondColumn: string): number {
+        const x = this.columns.indexOf(firstColumn);
+        const y = this.columns.indexOf(secondColumn);
+        const n = this.rows;
+
+        //mean of each column
+        const mean = this.mean([firstColumn, secondColumn]);
+        const meanX = mean[firstColumn];
+        const meanY = mean[secondColumn];
+
+        // Calculate standard deviations of each column
+        const stdDev = this.standardDeviation([firstColumn, secondColumn]);
+        const stdDevX = stdDev[firstColumn];
+        const stdDevY = stdDev[secondColumn];
+
+        // Calculate covariance
+        let covariance = 0;
+        for (let i = 0; i < n; i++) {
+            covariance += (this.data[i][x] - meanX) * (this.data[i][y] - meanY);
+        }
+        covariance /= n;
+
+        // Calculate correlation coefficient
+        const correlation = covariance / (stdDevX * stdDevY);
+
+        return parseFloat(correlation.toFixed(2));
     }
 }

@@ -4,12 +4,12 @@ import { DataFrameOptions } from '../index';
 describe('Testing groupBy class implementation', () => {
 
     let dataFrameOptions: DataFrameOptions = ({
-        columns: ['name', 'age', 'gender'],
+        columns: ['name', 'age', 'gender', 'marks'],
         data: [
-            ['John', 30, 'male'],
-            ['Jane', 25, 'female'],
-            ['John', 40, 'male'],
-            ['Jane', 30, 'female']
+            ['John', 30, 'male', 60],
+            ['Jane', 25, 'female', 70],
+            ['John', 40, 'male', 80],
+            ['Jane', 30, 'female', 90]
         ]
 
     });
@@ -28,5 +28,11 @@ describe('Testing groupBy class implementation', () => {
     it('Should return mode for the given columns of a dataframe', () => {
         let result = dataFrame.mode(['age']);
         expect(result).toEqual({ age: 30 });
+    });
+
+    it('Should return correlation for the given columns of a dataframe', () => {
+        let result = dataFrame.correlation('age', 'marks');
+        expect(result).toEqual(0.31);
+
     });
 });
