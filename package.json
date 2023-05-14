@@ -1,6 +1,6 @@
 {
   "name": "theshdb-data-ops",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A high-level data processing library similar to Pandas in Python which provide basic functionality for handling and manipulating structured data ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
