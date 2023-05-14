@@ -7,6 +7,13 @@ export class DataFrame extends StatisticalOps {
         super(options);
     }
 
+    /**
+    * Creates a new DataFrame from a JSON file.
+    *
+    * @param {string} path - The path to the JSON file.
+    * @returns {DataFrame} A new DataFrame object with the data from the JSON file.
+    * @throws {Error} If the JSON file cannot be read or parsed.
+    */
     static fromJSON(path: string): DataFrame {
         let data: string = fs.readFileSync(path, { encoding: 'utf-8' });
         data = data.replace(/\r/g, '');
@@ -25,6 +32,15 @@ export class DataFrame extends StatisticalOps {
         return dataFrame;
     }
 
+
+    /**
+     * Creates a new DataFrame from a CSV file.
+     *
+     * @static
+     * @param {string} path - The path to the CSV file.
+     * @returns {DataFrame} A new DataFrame object containing the data from the CSV file.
+     * @throws {Error} If the CSV file is empty.
+     */
     static fromCSV(path: string): DataFrame {
         let data: string = fs.readFileSync(path, { encoding: 'utf-8' });
         data = data.replace(/\r/g, '');
