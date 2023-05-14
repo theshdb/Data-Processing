@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import { DataFrameOptions } from '../abstractions/interfaces';
 import { StatisticalOps } from './statisticalOps';
 
-export default class DataFrame extends StatisticalOps {
+export class DataFrame extends StatisticalOps {
     constructor(options: DataFrameOptions) {
         super(options);
     }

@@ -1,5 +1,5 @@
-import { DataFrameIterator, DataFrameOptions, DataFrameRow } from './interfaces';
-import DataFrame from '../implementations/dataFrame';
+import { DataFrameIterator, DataFrameRow } from './interfaces';
+import { DataFrame } from '../implementations/dataFrame';
 
 export abstract class AbstractDataFrameStructure implements DataFrameIterator {
     protected abstract _columns: string[];
