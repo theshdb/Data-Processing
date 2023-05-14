@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import { DataFrameOptions, DataFrameRow } from '../abstractions/interfaces';
 import { AbstractDataFrameStructure } from '../abstractions/abstractDataFrame';
-import DataFrame from './dataFrame';
+import { DataFrame } from './dataFrame';
 
 export class DataFrameStructure extends AbstractDataFrameStructure {
     protected _columns: string[];

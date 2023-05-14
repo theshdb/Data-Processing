@@ -1,6 +1,6 @@
 import { GroupedData } from '../abstractions/interfaces';
 import { AbstractGroupBy } from '../abstractions/abstractGroupBy';
-import DataFrame from './dataFrame';
+import { DataFrame } from './dataFrame';
 
 export class GroupBy extends AbstractGroupBy {
     constructor(dataFrame: DataFrame, columns: string[]) {

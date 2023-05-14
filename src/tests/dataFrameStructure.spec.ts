@@ -1,5 +1,5 @@
 import { DataFrameOptions } from '../abstractions/interfaces';
-import DataFrame from '../implementations/dataFrame';
+import { DataFrame } from '../implementations/dataFrame';
 import { DataFrameStructure } from '../implementations/dataFrameStructure';
 import fs from 'fs'
 

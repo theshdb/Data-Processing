@@ -1,4 +1,3 @@
-import { DataFrameStructure } from '../implementations/dataFrameStructure';
 import { DataManipulation } from '../implementations/dataManipulation';
 
 export abstract class AbstractionStatisticalOps extends DataManipulation {

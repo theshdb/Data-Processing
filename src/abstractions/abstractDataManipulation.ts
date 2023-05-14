@@ -1,4 +1,4 @@
-import DataFrame from '../implementations/dataFrame';
+import { DataFrame } from '../implementations/dataFrame';
 import { DataFrameStructure } from '../implementations/dataFrameStructure';
 import { GroupBy } from '../implementations/groupBy';
 
