@@ -21,6 +21,72 @@ export class DataFrame extends StatisticalOps {
      * });
      */
     constructor(options: DataFrameOptions) {
+
+        //In this code block we are doing a row wise check where we are storing the last row data types for all columns and 
+        // then comparing it with the current row data types. If the data types are not the same then we throw an error.
+
+
+        // let lastRowDataTypes: string[] = [];
+        // for (let i = 0; i < options.data.length; i++) {
+
+        //     let currentRowDataTypes: string[] = [];
+        //     for (let j = 0; j < options.data[i].length; j++) {
+
+        //         currentRowDataTypes.push(typeof options.data[i][j])
+        //     }
+
+        //     if (lastRowDataTypes.length == 0) {
+        //         lastRowDataTypes = currentRowDataTypes;
+        //     } else {
+        //         for (let i = 0; i < lastRowDataTypes.length; i++) {
+        //             if (lastRowDataTypes[i] !== currentRowDataTypes[i]) {
+        //                 let columns = options.columns[i]
+        //                 throw new Error(`Column ${options.columns[i]} has ${currentRowDataTypes[i]} as it's data type.`)
+        //             }
+        //         }
+        //     }
+        // }
+
+
+
+        // In this code block we are doing a column wise check where we are storing the all the possible data types for a 
+        // column and after reading the wole data we inspect whether we got more than one data type for any column if we do
+        // so then we throw an error.
+
+        let columnTypes: { [key: string]: { [key: string]: number } } = {};
+
+        for (let i = 0; i < options.columns.length; i++) {
+            columnTypes[options.columns[i]] = {};
+        }
+
+        for (let i = 0; i < options.data.length; i++) {
+            for (let j = 0; j < options.data[i].length; j++) {
+                let dataType = typeof options.data[i][j];
+                if (columnTypes[options.columns[j]][dataType] == undefined) {
+                    columnTypes[options.columns[j]][dataType] = 1;
+                } else {
+                    columnTypes[options.columns[j]][dataType]++;
+                }
+            }
+        }
+
+        let typeErrors: string[] = [];
+        for (const column in columnTypes) {
+            if (Object.keys(columnTypes[column]).length > 1) {
+                const expectedType: string | undefined = Object.keys(columnTypes[column]).find(key => columnTypes[column][key] === Math.max(...Object.values(columnTypes[column])));
+
+                delete columnTypes[column][expectedType!];
+
+                const otherTypes: string = Object.keys(columnTypes[column]).join(', ');
+                const otherTypesCount: string = Object.values(columnTypes[column]).join(', ');
+                typeErrors.push(`Expected ${expectedType} data type for column ${column} but got ${otherTypes} data type instances with respective occurances ${otherTypesCount}.`);
+            }
+        }
+
+        if (typeErrors.length > 0) {
+            throw new Error(typeErrors.join('\n\t'));
+        }
+
         super(options);
     }
 

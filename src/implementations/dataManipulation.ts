@@ -69,4 +69,19 @@ export class DataManipulation extends AbstractDataManipulation {
             data: sortedData,
         });
     }
+
+    protected _addMultiColumns(columnName: string, columnsList: string[]): DataFrame {
+        const data = this.data.map((row) => [...row]);
+
+        for (let i = 0; i < this.rows; i++) {
+            let newval: number = 0;
+            for (let j = 0; j < columnsList.length; j++) {
+                newval += this.data[i][this.columns.indexOf(columnsList[j])]
+            }
+            data[i].push(newval);
+        }
+
+        const columns: string[] = [...this.columns, columnName];
+        return new DataFrame({ columns, data });
+    }
 }

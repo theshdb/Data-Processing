@@ -9,8 +9,10 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
 
     constructor(options: DataFrameOptions) {
         super();
+
         this._columns = options.columns;
         this._data = options.data;
+
     }
 
     [Symbol.iterator](): IterableIterator<DataFrameRow> {
@@ -197,4 +199,7 @@ export class DataFrameStructure extends AbstractDataFrameStructure {
 
         fs.writeFileSync(path, csv);
     }
+
+
+
 }

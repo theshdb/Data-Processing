@@ -35,6 +35,10 @@ export abstract class AbstractDataManipulation extends DataFrameStructure {
         return this._addColumns(columnName, column1, column2);
     }
 
+    public addMultiColumns(columnName: string, columns: string[]): DataFrame {
+        return this._addMultiColumns(columnName, columns);
+    }
+
 
     /**
     * Filters the DataFrame object by a column value and returns the filtered DataFrame object.
@@ -134,5 +138,7 @@ export abstract class AbstractDataManipulation extends DataFrameStructure {
         columns: string[],
         orders: ('asc' | 'desc')[],
     ): DataFrame;
+
+    protected abstract _addMultiColumns(columnName: string, columns: string[]): DataFrame;
 
 }
